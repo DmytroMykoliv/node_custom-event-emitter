@@ -52,7 +52,7 @@ class MyEventEmitter {
       return false;
     }
 
-    listeners.forEach(({ listener, once }) => {
+    [...listeners].forEach(({ listener, once }) => {
       listener(...args);
 
       if (once) {
